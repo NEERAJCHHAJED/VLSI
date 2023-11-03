@@ -1,4 +1,4 @@
-Pipo Main Code
+A) Pipo Main Code
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -34,8 +34,6 @@ process(clk)
          end if;
          end process;
      slow_clk <= counter(1);
-
-
 end Behavioral;
 
 
@@ -44,9 +42,7 @@ end Behavioral;
 
 
 
-
-Pipo Tb
-
+B) Pipo Tb
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
