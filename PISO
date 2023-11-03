@@ -1,4 +1,4 @@
-Piso main code
+A) Piso main code
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -45,7 +45,10 @@ end Behavioral;
 
 
 
-Piso_tb
+
+
+
+B) Piso_tb
 
 
 library IEEE;
@@ -86,7 +89,3 @@ wait for 500 ns ;
 end process;
 
 end Behavioral;
-
-
-
-
