@@ -1,4 +1,4 @@
-fifo.main
+A) FIFO MAIN CODE
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -63,10 +63,6 @@ empty0<= '1';
 end if ;
 end if ; 
 
-
-
-
-
 if enr='1' and empty0='0' then 
 
 dataout <= memory (conv_integer(readptr));
@@ -108,8 +104,7 @@ end Behavioral;
 
 
 
-
-fifo_tb
+B) FIFO TESTBENCH
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -121,7 +116,7 @@ USE ieee.std_logic_1164.ALL;
 ENTITY fifo_test IS
 END fifo_test;
  
-ARCHITECTURE behavior OF fifo_test IS 
+ARCHITECTURE beh OF fifo_test IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
@@ -201,4 +196,4 @@ enw<= '1', '0' after 200 ns ;
 	 
  end process;
 
-END;
+END beh;
