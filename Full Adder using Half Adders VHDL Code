@@ -1,36 +1,50 @@
-B) FULL ADDER Using Half Adders :-
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 14.08.2023 15:20:44
--- Design Name: 
--- Module Name: full_adderst - Structural
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
+A) OR GATE CODE:
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+entity or_gate is
+  Port ( p : in STD_LOGIC;
+          q : in STD_LOGIC;
+          r : out STD_LOGIC);
+end or_gate;
 
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+architecture Behavioral of or_gate is
+
+begin
+
+r<= p or q;
+end Behavioral;
+
+
+
+
+B) HALF ADDER CODE:
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity half_adder is
+    Port ( a : in STD_LOGIC;
+           b : in STD_LOGIC;
+           s : out STD_LOGIC;
+           c : out STD_LOGIC);
+end half_adder;
+
+architecture Behavioral of half_adder is
+
+begin
+ s <= a xor b ;
+ c<= (a and b);
+
+end Behavioral;
+
+
+
+C) FULL ADDER Using Half Adders :-
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
 
 entity full_adderst is
     Port ( a : in STD_LOGIC;
@@ -70,44 +84,9 @@ end Structural;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-Test Bench-
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- Create Date: 14.08.2023 15:35:08
--- Design Name: 
--- Module Name: full_addertb - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- Dependencies: 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
-----------------------------------------------------------------------------------
+D) Test Bench-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity full_addertb is
 --  Port ( );
@@ -162,5 +141,3 @@ cin<='1';
 wait for 100ns;
 end process;
 end Behavioral;
-
-
