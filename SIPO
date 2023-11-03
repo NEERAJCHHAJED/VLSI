@@ -1,4 +1,4 @@
-Sipo Main Code
+A) Sipo Main Code
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -46,7 +46,7 @@ end Behavioral;
 
 
 
-Sipo Tb
+B) Sipo Tb
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
